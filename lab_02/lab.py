@@ -1,4 +1,9 @@
 def absolute_value(n):
+    if n<0:
+        return n*-1
+    else:
+        return n
+   
     '''
     this function returns the absolute value of n
 
@@ -14,6 +19,7 @@ def absolute_value(n):
     
 
 def hypotenuse(a,b):
+    return ((a*a)+(b*b))**(1/2)
     '''
     returns c = square root of a squared plus b squared
 
@@ -25,6 +31,10 @@ def hypotenuse(a,b):
     
 
 def is_even(n):
+    if n%2==0:
+        return True
+    else:
+        return False
     '''
     this function returns True if n is even and False if n is odd
 
@@ -42,6 +52,11 @@ def is_even(n):
 
 
 def max_num(a,b):
+    if a>b:
+        return a
+    else:
+        return b
+    
     '''
     this function returns the maximum of a and b
 
@@ -57,6 +72,19 @@ def max_num(a,b):
     
 
 def max_num_abs(a,b):
+    ab=a
+    ba=b
+    if a<0:
+        ab=a*-1
+    if b<0:
+        ba=b*-1
+    if ab>ba:
+        return a
+    else:
+        return b
+    
+    
+    
     '''
     this function returns the number with the highest absolute value
 
@@ -89,6 +117,13 @@ def max_num_4(a,b,c,d):
     
 
 def num_digits(n):
+    if n<0:
+        n=n*-1
+    return len(str(n))
+  
+    
+   
+    
     '''
     Returns the number of digits in the input n.
     Note that a negative sign does not count as a digit,
@@ -112,6 +147,12 @@ def num_digits(n):
 
 
 def is_leap_year(n):
+    if n>=1582 and n%4==0 and (n%400==0 or n%100!=0):
+        return True
+    else:
+        return False
+        
+    
     '''
     Returns True if n is a leap year and False otherwise.
 
@@ -138,3 +179,5 @@ def is_leap_year(n):
 # DO NOT MODIFY BELOW THIS LINE
 import doctest
 doctest.testmod(verbose=True)
+
+
