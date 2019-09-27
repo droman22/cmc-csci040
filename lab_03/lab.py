@@ -1,4 +1,10 @@
 def factorial(n):
+    result=1
+    for i in range(1, n+1):
+        result=result*i
+    return result
+
+    
     '''
     Calculates the factorial of n.
     Recall that the factorial of n is defined to be: 1*2*3*...*(n-1)*n 
@@ -20,6 +26,17 @@ def factorial(n):
     '''
 
 def is_prime(n):
+   if n<2:
+     return False
+   else:
+    for i in range(2,n-1):
+        if (n % i)==0:
+            return False
+   return True
+   
+        
+
+
     '''
     Returns true if n is prime, and false otherwise
     Recall that a prime number is divisible only by itself and 1,
@@ -42,6 +59,15 @@ def is_prime(n):
     '''
 
 def fizz_buzz(n):
+    for i in range(1, n+1):
+    	if ((i % 3) and (i % 5))==0:
+    		print ('FizzBuzz')
+    	elif (i % 3)==0:
+    		print ('Fizz')
+    	elif (i % 5)==0:
+    		print('Fizz')
+    	else:
+    		print(i)
     '''
     for each number between 1 and n:
         if the number is a multiple of 3, print 'Fizz',
